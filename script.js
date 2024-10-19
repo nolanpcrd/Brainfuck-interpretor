@@ -13,7 +13,7 @@ function translateBf(){
 
   for (let i=0;i<code.length;i++){
     let instruction = code.charAt(i);
-    log(instruction);
+    logMessage(instruction);
     switch (instruction){
       case '>':
         currentIndex++;
@@ -47,6 +47,6 @@ function translateBf(){
   document.getElementById('result').value = result;
 }
 
-fonction log(message){
+function logMessage(message){
   document.getElementById('log').value += '| ' + message + ' ';
 }
