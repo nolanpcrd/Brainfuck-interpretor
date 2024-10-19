@@ -24,6 +24,7 @@ function translateBf(){
         break;
       case '+':
         memory[currentIndex]++;
+        logMessage('+1 ' + memory[currentIndex]);
       case '-':
         if(memory[currentIndex] > 0) memory[currentIndex]--;
         break;
