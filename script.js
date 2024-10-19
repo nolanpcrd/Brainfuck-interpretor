@@ -15,24 +15,18 @@ function translateBf(){
     switch (instruction){
       case '>':
         currentIndex++;
+        memory[currentIndex] = 0;
         break;
       case '<':
-        currentIndex--
+        if (currentIndex>0) currentIndex--;
         break;
       case '+':
-        if (typeof memory[currentIndex] !== undefined){
-          memory[currentIndex]++;
-        }
+        memory[currentIndex]++;
       case '-':
-        if (typeof memory[currentIndex] !== undefined){
-          memory[currentIndex]--;
-        }
-        else {
-          memory[currentIndex] = 1;
-        }
+        if(memory[currentIndex] > 0) memory[currentIndex]--;
         break;
       case '.':
-        if (typeof memory[currentIndex] !== undefined && memory[currentIndex] >= 1){
+        if (memory[currentIndex] > 0){
           result += String.fromCharCode(memory[currentIndex]);
         }
         else {
