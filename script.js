@@ -17,7 +17,9 @@ function translateBf(){
     switch (instruction){
       case '>':
         currentIndex++;
-        memory[currentIndex] = 0;
+        if (memory[currentIndex] === undefined) {
+          memory[currentIndex] = 0;
+        }
         break;
       case '<':
         if (currentIndex>0) currentIndex--;
@@ -25,6 +27,7 @@ function translateBf(){
       case '+':
         memory[currentIndex]++;
         logMessage('+1 ' + memory[currentIndex]);
+        break;
       case '-':
         if(memory[currentIndex] > 0) memory[currentIndex]--;
         break;
