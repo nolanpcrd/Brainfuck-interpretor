@@ -36,7 +36,7 @@ function translateBf(){
           result += String.fromCharCode(memory[currentIndex]);
         }
         else {
-          result = 'error';
+          result = 'error : ' + memory[currentIndex];
           document.getElementById('result').value = result;
           return;
         }
