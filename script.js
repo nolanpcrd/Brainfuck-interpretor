@@ -9,6 +9,7 @@ function translateBf(){
   let memory = [];
   let result = "";
   let currentIndex = 0;
+  memory[0] = 0;
 
   for (let i=0;i<code.length;i++){
     let instruction = code.charAt(i);
